@@ -1,0 +1,60 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        .center-container {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container center-container d-flex justify-content-center align-items-center">
+        <div class="w-50 p-5 border rounded">
+            <h1 class="mb-4 text-center">Login</h1>
+
+            <form method='post' class="needs-validation" novalidate>
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group mb-3">
+                        {{ field.label_tag }}
+                        {% render_field field class="form-control" %}
+                        {% if field.help_text %}
+                            <small class="form-text text-muted">
+                                {{ field.help_text|safe }}
+                            </small>
+                        {% endif %}
+                        {% if field.errors %}
+                            <div class="invalid-feedback d-block">
+                                {{ field.errors|striptags }}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <div class="form-group">
+                    {{ form.non_field_errors }}
+                </div>
+                <div class="text-center">
+                    <button type='submit' class="btn btn-primary">Login</button>
+                </div>
+            </form>
+
+            <div class="text-center mt-3">
+                Dont have account?<br><a href="{% url 'signup' %}" class="btn btn-link">Signup</a>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'heart_prediction' %}">Heart Failure Prediction</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'prediction_history' %}">Prediction History</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Prediction History</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-default">
+                    <tr>
+                        <th>Date</th>
+                        <th>Age</th>
+                        <th>Chest Pain Type</th>
+                        <th>Resting Blood Pressure</th>
+                        <th>Cholesterol</th>
+                        <th>Fasting Blood Sugar</th>
+                        <th>Resting ECG</th>
+                        <th>Max Heart Rate</th>
+                        <th>Exercise Angina</th>
+                        <th>Oldpeak</th>
+                        <th>ST Slope</th>
+                        <th>Heart Failure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pred in predictions %}
+                    <tr>
+                        <td>{{ pred.Date }}</td>
+                        <td>{{ pred.Age }}</td>
+                        <td>{{ pred.Chest_Pain_Type }}</td>
+                        <td>{{ pred.Resting_Blood_Pressure }}</td>
+                        <td>{{ pred.Cholesterol }}</td>
+                        <td>{{ pred.Fasting_Blood_Sugar }}</td>
+                        <td>{{ pred.Resting_ECG }}</td>
+                        <td>{{ pred.Max_Heart_Rate }}</td>
+                        <td>{{ pred.Exercise_Angina }}</td>
+                        <td>{{ pred.Oldpeak }}</td>
+                        <td>{{ pred.ST_Slope }}</td>
+                        <td>{{ pred.Heart_Failure }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
