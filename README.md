@@ -27,7 +27,7 @@ I built multiple types of models and compared their performance on the test data
 
 Among these models Logistic Regression model performs better compared to others based on the f1 score. Therefore, I used Logistic Regression to build predictive model for this app.
 
-Here is the jupyter notebook which i used to build this model: [Machine Learning model building project](https://github.com/gurung-ajay/Heart-Failure-Prediction-App/blob/main/ML%20model/Project_Heart_Failure_Prediction.ipynb)
+Here is the jupyter notebook which I used to build this model: [Machine Learning model building project](https://github.com/gurung-ajay/Heart-Failure-Prediction-App/blob/main/ML%20model/Project_Heart_Failure_Prediction.ipynb)
 
 ## App Demonstration
 * When you open the app, you will be greeted with this page:
