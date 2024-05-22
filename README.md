@@ -1,3 +1,5 @@
+# Heart Failure Prediction App
+
 ## About the app
 
 This app is built using Django and leverages a machine learning model to predict the risk of heart failure based on the health details provided by the patient.
@@ -7,18 +9,31 @@ Please note that this app is for demonstration purposes only, and the prediction
 ## Installation
 To install the app, follow the steps below:
 1. Clone the repository by running the command in terminal:
-   * git clone https://github.com/gurung-ajay/DailyDiary
-2. Install the dependencies for running the app. These are included in the file DailyDiaryProject/requirements.txt as:
-   * asgiref==3.7.2
-   * Django==4.2.5
-   * sqlparse==0.4.4
-   * typing_extensions==4.9.0
-   * tzdata==2023.3
-   
-   For installing them, run the command below in terminal:
+   * git clone https://github.com/gurung-ajay/Heart-Failure-Prediction-App
+2. Install the dependencies for running the app. These are included in the file requirements.txt by running the command below in terminal:
    * pip install -r requirements.txt
-3. To start the server, run the file DailyDiaryProject/manage.py by running this command on terminal:
+3. To start the server, run the file heartfailure_prediction/manage.py by running this command on terminal:
    * py manage.py runserver
    
    This will give an ip address for localhost:  http://127.0.0.1:8000/
 4. Open the ip address in the browser and it will open the app
+
+## App Demonstration
+* When you open the app, you will be greeted with this page:
+  <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/8fcccdf9-98f4-4f01-9686-852ed1709cce">
+
+* Click on login to enter login page:
+  <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/7aa9de4a-43f5-4f20-9577-fa0422026005">
+
+* If u dont have account, click signup:
+  <img width="956" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/8564dd91-efba-4a8c-ba17-875954c3b9ba">
+
+* After logging in, you can access the page that allows you to fill the form with your health details and get prediction for heart failure.
+  <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/c0234c0c-219b-4e28-a2bc-373d1a7906ee">
+  <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/1ccdf7a2-6239-44fb-a57a-09f97f57278d">
+Now, when you click predict button you will get the result of whether you are at risk of heart failure or not, along with the probability for heart failure
+  <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/b32cb7a5-d169-44bc-9059-e77565f21ea6">
+
+  
+* You can also view prediction history by clicking on 'Prediction History' option on navbar
+  <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/e27adbe8-640a-4dd7-9e21-74a937ba5daf">
