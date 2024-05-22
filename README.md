@@ -18,6 +18,14 @@ To install the app, follow the steps below:
    This will give an ip address for localhost:  http://127.0.0.1:8000/
 4. Open the ip address in the browser and it will open the app
 
+## Building Predictive model with Machine Learning
+For building machine learning model I used the data set from this link: 
+
+I built multiple types of models and compared their performance on the test dataset using cross validation with f1 scores.
+<img width="522" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/66d5e92e-7eed-486e-9615-4f8eae0a26d2">
+
+Among these models Logistic Regression model performs better compared to others based on the f1 score. Therefore, I used Logistic Regression to build model for this app.
+
 ## App Demonstration
 * When you open the app, you will be greeted with this page:
   
@@ -48,3 +56,4 @@ To install the app, follow the steps below:
 * You can also view prediction history by clicking on 'Prediction History' option on navbar
   
   <img width="959" alt="image" src="https://github.com/gurung-ajay/Heart-Failure-Prediction-App/assets/135496373/e27adbe8-640a-4dd7-9e21-74a937ba5daf">
+
